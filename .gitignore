@@ -12,3 +12,5 @@ __pycache__
 
 # our config settings for production
 config/config.py
+
+api/migrations
