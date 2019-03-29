@@ -15,28 +15,19 @@ import sys
 from pathlib import Path
 import json
 
-# sets the location of our config file - we dont commit config to version control :)
-cwd = os.path.abspath(os.path.dirname(__file__))
-config_dir = str(Path(cwd).parent) + '/config/'
-sys.path.append(config_dir)
-import config
-
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config.django_secret_key
+SECRET_KEY = 's_8yenv=i-0nx19y#+-#%1iuhibt-qdb9f!ugq!ewssu(7+ge_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config.debug
+DEBUG = True
 
-ALLOWED_HOSTS = config.allowed_hosts
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'api',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
