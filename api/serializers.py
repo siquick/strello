@@ -27,7 +27,7 @@ class BoardsSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = models.Boards
-        fields = ('title','lists')
+        fields = ('pk','title','last_updated','owner','created','lists')
 
 
 

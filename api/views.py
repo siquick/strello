@@ -11,7 +11,7 @@ from . import serializers
 class HelloWorld(views.APIView):
     def get(self, request, *args, **kwargs):
         return Response(status=status.HTTP_200_OK,
-                            data={'success': 'true'})
+                            data={'message': 'Hello World'})
 
 
 class ListBoards(viewsets.ModelViewSet):
