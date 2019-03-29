@@ -1,0 +1,14 @@
+#general
+pyc
+db.sqlite3
+venv
+.vscode
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# our config settings for production
+config/config.py
