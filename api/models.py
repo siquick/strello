@@ -8,7 +8,6 @@
 from django.db import models
 from django.db.models import CharField, DateField
 from django.conf import settings
-from django_extensions.db.fields import AutoSlugField
 
 
 class Cards(models.Model):
