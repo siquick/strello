@@ -4,6 +4,7 @@ db.sqlite3
 venv
 .vscode
 __pycache__
+mydatabase
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

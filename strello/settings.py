@@ -40,9 +40,12 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'debug_toolbar',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # needed for CORS
+    'django.middleware.common.CommonMiddleware', # needed for CORS
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,3 +133,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 
 INTERNAL_IPS = os.environ.get('INTERNAL_IPS')
+
+# this would be updated to production frontend URL
+CORS_ORIGIN_WHITELIST = (
+    '*'
+)
