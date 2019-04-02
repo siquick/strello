@@ -1,6 +1,14 @@
 from . import models
+from django.contrib.auth import get_user_model
+User = get_user_model()
 from rest_framework import serializers
 
+
+class UsersSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'date_joined', 'last_login')
 
 class LabelsSerializer(serializers.ModelSerializer):
 
@@ -39,7 +47,7 @@ class ListsSerializer(serializers.ModelSerializer):
 
 
 class ListListsSerializer(serializers.ModelSerializer):
-
+    cards = CardsSerializer(many=True, read_only=True)
     class Meta:
         model = models.Lists
         fields = '__all__'

@@ -5,6 +5,7 @@ venv
 .vscode
 __pycache__
 mydatabase
+.idea/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

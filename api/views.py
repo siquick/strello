@@ -1,15 +1,14 @@
+from . import serializers
 from rest_framework import views, generics
 from rest_framework.response import Response
 from rest_framework.views import status
 from . import models
-from . import serializers
-
-# Create your views here.
-# make sure the API is running
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 class HelloWorld(views.APIView):
-    def get(self, request, *args, **kwargs):
+    def get(self, *args, **kwargs):
         return Response(status=status.HTTP_200_OK,
                         data={'message': 'Hello World'})
 
@@ -44,6 +43,11 @@ class ListLabels(generics.ListCreateAPIView):
     queryset = models.Labels.objects.all()
     serializer_class = serializers.LabelsSerializer
 
+
+class ListUsers(generics.ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = serializers.UsersSerializer
+
 # must be able to perform all actions on a board
 
 
@@ -71,3 +75,8 @@ class CardDetails(generics.RetrieveUpdateDestroyAPIView):
 class LabelDetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Labels.objects.all().prefetch_related()
     serializer_class = serializers.LabelsSerializer
+
+class UserDetails(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all().prefetch_related()
+    serializer_class = serializers.UsersSerializer
+

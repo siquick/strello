@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
     'corsheaders',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,4 @@ STATIC_ROOT = 'static'
 INTERNAL_IPS = os.environ.get('INTERNAL_IPS')
 
 # this would be updated to production frontend URL
-CORS_ORIGIN_WHITELIST = (
-    '*'
-)
+CORS_ORIGIN_ALLOW_ALL = True

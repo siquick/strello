@@ -10,7 +10,6 @@
 from django.db import models
 from django.conf import settings
 
-
 class Labels(models.Model):
     title = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True, editable=False)
@@ -46,11 +45,11 @@ class Cards(models.Model):
         on_delete=models.CASCADE,
         related_name='cards2')
     position = models.IntegerField()
-    label = models.IntegerField(blank=True)
+    label = models.IntegerField()
     archived = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ('-created',)
+        ordering = ('-position',)
 
     def __str__(self):
         return '{}: Owner: {} / Assignee: {}'.format(

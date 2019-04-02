@@ -15,6 +15,7 @@ django-cors-headers==2.5.2
 django-debug-toolbar==1.11
 django-extensions==2.1.6
 django-rest-framework==0.1.0
+django-rest-swagger==2.2.0
 djangorestframework==3.9.2
 docker==3.7.2
 docker-compose==1.23.2
