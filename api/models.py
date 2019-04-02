@@ -92,7 +92,7 @@ class Boards(models.Model):
     archived = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ('-created',)
+        ordering = ('-last_updated',)
 
     def __str__(self):
         return self.title
