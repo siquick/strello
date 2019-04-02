@@ -35,7 +35,6 @@ class ListsSerializer(serializers.ModelSerializer):
         model = models.Lists
         fields = '__all__'
 
-
 # list all the lists (used by BoardsSerializer)
 class BoardDetailsSerializer(serializers.ModelSerializer):
     lists = ListsSerializer(many=True, read_only=True)
