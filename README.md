@@ -27,6 +27,7 @@ of this document for example variables)
 `$ pip install -r requirements.txt`  
 `$ python manage.py makemigrations`  
 `$ python manage.py migrate`  
+`$ python manage.py test`  
 `$ python manage.py runserver`
 
 You'll then need to create a user, a board, a list, a card, and a label (in that order
@@ -46,14 +47,14 @@ http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com/cards/
 Create Label  
 http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com/labels/  
 
-### Endpoints / Process
+### Endpoints / Verbs
 Prepend with `http://127.0.0.1:8000` for local or `http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com` for production.
 
 /members/
 
 `/members/` accepts  `GET, POST, HEAD, OPTIONS`  
-`/member/<member_id>`  
-`/boards/` accepts  `GET, POST, HEAD, OPTIONS`
+`/member/<member_id>`  accepts `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`    
+`/boards/` accepts  `GET, POST, HEAD, OPTIONS`  
 `/board/<board_id>`  accepts `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`  
 `/lists/` accepts  `GET, POST, HEAD, OPTIONS`  
 `/list/<list_id>`  accepts `GET, PUT, PATCH, DELETE, HEAD, OPTIONS`   
@@ -104,4 +105,6 @@ Example variables using SQLite3 on local environment
 
 ### Enhancements in next iteration
 
-Authentication / Authorization
+Authentication / Authorization  
+Coverage  
+Dockerise   
