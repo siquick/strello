@@ -25,7 +25,7 @@ class CardsSerializer(serializers.ModelSerializer):
         model = models.Cards
         fields = '__all__'
 
-# list all the lists but include all the cards on the
+# list all the lists but include all the cards on the list
 
 
 class ListsSerializer(serializers.ModelSerializer):
@@ -36,6 +36,8 @@ class ListsSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 # list all the lists (used by BoardsSerializer)
+
+
 class BoardDetailsSerializer(serializers.ModelSerializer):
     lists = ListsSerializer(many=True, read_only=True)
 

@@ -26,6 +26,8 @@ past environment variables to the bottom of this file (see below)
 `$ python manage.py migrate`  
 `$ python manage.py runserver`
 
+You'll then need to create a user, a board, a list, a card, and a label (in that order)
+
 
 ### Endpoints
 Prepend with `http://127.0.0.1:8000` for local or `http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com` for production.
@@ -46,12 +48,14 @@ Prepend with `http://127.0.0.1:8000` for local or `http://strello.ekhry3m6if.ap-
 `GET` = retrieve  
 
 
-#### Tests
+### Tests / PEP8
 
-`python manage.py test`
+`python manage.py test`  
+`flake8 api`  
+`flake8 strello`  
 
 
-#### Environment Variables
+### Environment Variables
 You will need to set the following environment variables (these go in `venv/bin/activate`)
 
 `export SECRET_KEY='your-secret-key'`  
@@ -79,6 +83,6 @@ Example variables using SQLite3 on local environment
 `export ALLOWED_HOSTS=['*']` 
 
 
-#### Enhancements in next iteration
+### Enhancements in next iteration
 
 Authentication / Authorization
