@@ -50,9 +50,9 @@ Prepend with `http://127.0.0.1:8000` for local or `http://strello.ekhry3m6if.ap-
 
 ### Tests / PEP8
 
-`python manage.py test`  
-`flake8 api`  
-`flake8 strello`  
+`$ python manage.py test`  
+`$ flake8 api`  
+`$ flake8 strello`  
 
 
 ### Environment Variables
