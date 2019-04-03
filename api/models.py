@@ -24,6 +24,7 @@ class Labels(models.Model):
 
     class Meta:
         ordering = ('-created',)
+        verbose_name_plural = 'Labels'
 
     def __str__(self):
         return 'Board: {}, Label: {}'.format(self.board, self.title)
@@ -52,6 +53,7 @@ class Cards(models.Model):
 
     class Meta:
         ordering = ('position',)
+        verbose_name_plural = 'Cards'
 
     def __str__(self):
         return '{}: Owner: {} / Assignee: {}'.format(
@@ -76,6 +78,7 @@ class Lists(models.Model):
 
     class Meta:
         ordering = ('position',)
+        verbose_name_plural = 'Lists'
 
     def __str__(self):
         return self.title
@@ -93,6 +96,7 @@ class Boards(models.Model):
 
     class Meta:
         ordering = ('-last_updated',)
+        verbose_name_plural = 'Boards'
 
     def __str__(self):
         return self.title
