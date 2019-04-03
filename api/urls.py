@@ -28,7 +28,7 @@ urlpatterns = [
 
     path('members/', ListUsers.as_view(), name='list-users'),
     path('member/<int:pk>', UserDetails.as_view(), name='list-label-details'),
-# ]
+]
 #
 # if settings.DEBUG:
 #     import debug_toolbar
