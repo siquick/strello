@@ -18,8 +18,11 @@ Schema in Swagger
 `$ git clone https://github.com/siquick/strello`  
 `$ cd strello`  
 `$ virtualenv -p python3 venv`     
-`$ nano venv/bin/activate`  
-past environment variables to the bottom of this file (see below)  
+`$ nano venv/bin/activate` You'll need to paste the environment variables to the bottom of this file (see bottom 
+of this document for example variables)  
+
+  
+
 `$ source venv/bin/activate`  
 `$ pip install -r requirements.txt`  
 `$ python manage.py makemigrations`  
