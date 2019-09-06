@@ -1,10 +1,6 @@
 # Strello API
 
-## Available at `strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com`  
-
-
 Written in Django & DRF with MySQL database  
-Hosted at AWS (Elastic Beanstalk)  
 Schema in Swagger  
 
 
