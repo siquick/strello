@@ -26,23 +26,6 @@ of this document for example variables)
 `$ python manage.py test`  
 `$ python manage.py runserver`
 
-You'll then need to create a user, a board, a list, a card, and a label (in that order
-
-Create User  
-http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com/members/  
-
-Create Board  
-http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com/boards/  
-
-Create List  
-http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com/lists/  
-
-Create Card  
-http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com/cards/  
-
-Create Label  
-http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com/labels/  
-
 ### Endpoints / Verbs
 Prepend with `http://127.0.0.1:8000` for local or `http://strello.ekhry3m6if.ap-southeast-2.elasticbeanstalk.com` for production.
 
