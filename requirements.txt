@@ -42,7 +42,7 @@ pyflakes==2.1.1
 pylint==2.3.1
 python-dateutil==2.8.0
 pytz==2018.9
-PyYAML==3.13
+PyYAML==5.4
 requests==2.20.1
 semantic-version==2.5.0
 simplejson==3.16.0
